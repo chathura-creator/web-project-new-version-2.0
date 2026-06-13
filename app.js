@@ -293,3 +293,4 @@ function onVehicleSelectChange() {
     driverChargeEl.textContent = `Rs. ${driverFee.toLocaleString()}`;
     totalEl.textContent = `Rs. ${(basePrice + driverFee).toLocaleString()}`;
 }
+

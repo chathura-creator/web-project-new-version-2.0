@@ -216,9 +216,8 @@ a {
 }
 
 .btn-brand-outline {
-    background-color: transparent;
-    border: 1.5px solid var(--primary-color);
-    color: var(--primary-color);
+    background-color:#7dadeb;
+    color:white;
     font-weight: 600;
     padding: 10px 22px;
     border-radius: 8px;
@@ -336,4 +335,29 @@ a[href*="google.com/maps"]::after {
     content: " ↗";
     font-size: 11px;
     opacity: 0.6;
+}
+.hero-banner {
+    position: relative;
+    background-image: url("images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* DARK OVERLAY for better visibility */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.05); /* adjust darkness here */
+    z-index: 1;
+}
+
+/* Keep text above overlay */
+.hero-banner > div {
+    position: relative;
+    z-index: 2;
 }
