@@ -76,25 +76,46 @@
                     <div class="card p-4 border border-light-subtle bg-light rounded-3 h-100 shadow-sm">
                         <h4 class="fw-bold mb-4 text-dark border-bottom pb-2">HQ Operations Desk</h4>
                         <ul class="list-unstyled d-flex flex-column gap-4 text-sm mt-3 text-muted">
+
                             <li>
                                 <strong class="text-dark d-block mb-1">📍 Central Headquarters</strong>
-                                123 Main Street, Galle Road,<br>Colombo 03, Sri Lanka
+                                <a href="https://www.google.com/maps?q=123+Main+Street+Galle+Road+Colombo+03+Sri+Lanka"
+                                   target="_blank"
+                                   class="text-decoration-none">
+                                    123 Main Street, Galle Road,<br>Colombo 03, Sri Lanka
+                                </a>
                             </li>
+
                             <li>
                                 <strong class="text-dark d-block mb-1">☎️ Phone Inquiries</strong>
-                                Main Desk: +94 11 234 5678<br>
-                                Emergency Helpline (24/7): +94 11 999 0000
+                                Main Desk:
+                                <a href="tel:+94112345678" class="text-decoration-none">
+                                    +94 11 234 5678
+                                </a><br>
+                                Emergency Helpline (24/7):
+                                <a href="tel:+94119990000" class="text-decoration-none">
+                                    +94 11 999 0000
+                                </a>
                             </li>
+
                             <li>
                                 <strong class="text-dark d-block mb-1">✉️ Email Channels</strong>
-                                Booking Assistance: booking@rideeasy.com<br>
-                                General Support: support@rideeasy.com
+                                Booking Assistance:
+                                <a href="mailto:booking@rideeasy.com" class="text-decoration-none">
+                                    booking@rideeasy.com
+                                </a><br>
+                                General Support:
+                                <a href="mailto:support@rideeasy.com" class="text-decoration-none">
+                                    support@rideeasy.com
+                                </a>
                             </li>
+
                             <li>
                                 <strong class="text-dark d-block mb-1">⏱️ General Working Hours</strong>
                                 Mondays to Sundays: 7:00 AM – 10:00 PM<br>
                                 Key drop boxes active 24/7.
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -104,21 +125,25 @@
                     <div class="card p-4 border border-light-subtle bg-white rounded-3 shadow-sm">
                         <h4 class="fw-bold mb-4 text-dark border-bottom pb-2">Send Us a Message</h4>
                         <form id="contactForm" novalidate onsubmit="event.preventDefault(); document.getElementById('contactConfirmation').classList.remove('d-none'); this.reset();">
+                            
                             <div class="mb-3">
                                 <label for="cName" class="form-label text-xs uppercase font-semibold">Full Name</label>
                                 <input type="text" class="form-control" id="cName" placeholder="Your Name" required>
                                 <div class="invalid-feedback" id="cErrName"></div>
                             </div>
+
                             <div class="mb-3">
                                 <label for="cEmail" class="form-label text-xs uppercase font-semibold">Email Address</label>
                                 <input type="email" class="form-control" id="cEmail" placeholder="example@mail.com" required>
                                 <div class="invalid-feedback" id="cErrEmail"></div>
                             </div>
+
                             <div class="mb-3">
                                 <label for="cSubject" class="form-label text-xs uppercase font-semibold">Subject</label>
                                 <input type="text" class="form-control" id="cSubject" placeholder="Inquiry category" required>
                                 <div class="invalid-feedback" id="cErrSubject"></div>
                             </div>
+
                             <div class="mb-3">
                                 <label for="cMessage" class="form-label text-xs uppercase font-semibold">Your Message</label>
                                 <textarea class="form-control" id="cMessage" rows="5" placeholder="Write your requirements here..." required></textarea>
@@ -130,6 +155,7 @@
                             <div id="contactConfirmation" class="alert alert-success mt-3 text-center d-none">
                                 <strong>Message Sent!</strong> Thank you. Your message has been sent successfully. We will follow up with you within 24 hours.
                             </div>
+
                         </form>
                     </div>
                 </div>
