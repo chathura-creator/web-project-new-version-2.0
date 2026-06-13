@@ -361,3 +361,26 @@ a[href*="google.com/maps"]::after {
     position: relative;
     z-index: 2;
 }
+
+footer a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+footer a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+/* Optional better spacing feel */
+footer a {
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+footer a:hover {
+    background-color: #eff6ff;
+}
