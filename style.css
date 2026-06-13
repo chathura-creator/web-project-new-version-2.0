@@ -1,0 +1,304 @@
+/* ==========================================================
+   RideEasy - Professional & Clean Car Rental CSS
+   ========================================================== */
+
+:root {
+    --primary-color: #1e3a8a; /* Professional Royal Blue */
+    --hover-color: #1d4ed8;
+    --accent-color: #10b981;  /* Emerald */
+    --bg-light: #f8fafc;
+    --text-dark: #0f172a;
+    --border-light: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Top Navigation Bar Header */
+.top-navbar {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+}
+
+.top-nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav-link {
+    color: #475569;
+    font-weight: 500;
+    font-size: 14.5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.top-nav-link:hover, .top-nav-link.active {
+    color: var(--primary-color);
+    background-color: #f1f5f9;
+}
+
+/* Sidebar Toggle Trigger (Three Lines) */
+.sidebar-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    transition: background-color 0.2s;
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background-color: #ffffff;
+    border-right: 1px solid var(--border-light);
+    z-index: 1000;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, margin-left 0.3s ease;
+}
+
+/* Toggled hidden state for Sidebar */
+.sidebar.collapsed {
+    transform: translateX(-250px);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    min-height: calc(100vh - 70px);
+    background-color: #ffffff;
+    margin-top: 70px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Left Sidebar Menu Items */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #475569;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 14.5px;
+}
+
+.sidebar-link:hover {
+    background-color: #f1f5f9;
+    color: var(--primary-color);
+}
+
+.sidebar-link.active {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Sidebar Search Input */
+.sidebar-search {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 10px 16px 10px 38px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    background-color: #f8fafc;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.sidebar-search input:focus {
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+.sidebar-search::before {
+    content: "🔍";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Hero Section */
+.hero-banner {
+    background-color: #f8fafc;
+    border-radius: 16px;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-light);
+}
+
+/* Colored Buttons */
+.btn-brand-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-brand-primary:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-brand-accent {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-brand-accent:hover {
+    background-color: #059669;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-brand-outline {
+    background-color: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-brand-outline:hover {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+}
+
+/* Cards Modification */
+.ride-card {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.ride-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+}
+
+.ride-card img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Section Header */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid var(--border-light);
+    font-size: 14px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+/* FAQ Item */
+.faq-element {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+    .top-nav-links {
+        display: none;
+    }
+
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .sidebar.show-mobile {
+        transform: translateX(0);
+        box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 24px;
+    }
+}
